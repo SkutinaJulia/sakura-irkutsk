@@ -202,6 +202,14 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
   .s-dock .s-btn:first-child { flex: 1.7; }
 }
 
+/* правка Юли: 6 фото букетов */
+.s-six { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.s-six figure { position: relative; margin: 0; overflow: hidden; border-radius: var(--r); aspect-ratio: 3 / 4; }
+.s-six img { width: 100%; height: 100%; aspect-ratio: auto !important; object-fit: cover; display: block; transition: transform .5s ease; }
+.s-six figure:hover img { transform: scale(1.03); }
+.s-six figcaption { position: absolute; left: 0; right: 0; bottom: 0; margin: 0; padding: 26px 14px 10px; font-size: .82rem; font-weight: 600; color: #fff; background: linear-gradient(to top, rgb(0 0 0 / .55), transparent); }
+@media (max-width: 860px) { .s-six { grid-template-columns: 1fr 1fr; gap: 8px; } .s-six figcaption { padding: 20px 10px 8px; font-size: .76rem; } }
+
 /* правка Юли: фото и форма заказа на первом экране выровнены по низу (только компьютер) */
 @media (min-width: 861px) {
   .s-hero { align-items: stretch; }
